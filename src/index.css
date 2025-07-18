@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations and smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Stagger animation for grid items */
+.animate-stagger-in > * {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-stagger-in > *:nth-child(1) { animation-delay: 0.1s; }
+.animate-stagger-in > *:nth-child(2) { animation-delay: 0.2s; }
+.animate-stagger-in > *:nth-child(3) { animation-delay: 0.3s; }
+.animate-stagger-in > *:nth-child(4) { animation-delay: 0.4s; }
+.animate-stagger-in > *:nth-child(5) { animation-delay: 0.5s; }
+.animate-stagger-in > *:nth-child(6) { animation-delay: 0.6s; }
+.animate-stagger-in > *:nth-child(7) { animation-delay: 0.7s; }
+.animate-stagger-in > *:nth-child(8) { animation-delay: 0.8s; }
+.animate-stagger-in > *:nth-child(9) { animation-delay: 0.9s; }
+
+/* Custom scrollbar for dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500 dark:bg-gray-500;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+}
+
+.dark .animate-shimmer {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+  background-size: 200px 100%;
+}
+
+/* Line clamp utility for text truncation */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
