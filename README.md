@@ -225,6 +225,12 @@ To run this project
 ```bash
   npm run dev
 ```
+## 🌐 Live Development Server
+
+🚀 **Pakistan Events Website** – Development Preview  
+[![Open Pakistan Events Website](https://img.shields.io/badge/Open%20Website-Click%20Here-brightgreen?style=for-the-badge)](https://pakistan-events-website.vercel.app)
+
+> This is the development version of the Pakistan Events Tracker, built with Flask, API integrations, and real-time event updates.
 
 
 ## Environment Variables
